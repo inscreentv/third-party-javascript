@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+<div>Hi</div>
+<iframe src='http://localhost:9000/' id="guestFrame1" width='1200px' height='640px'  style='z-index:999999;margin: auto;position: absolute;top:0;bottom:0; left:0;right:0;-webkit-transform:scale(0.5);-moz-transform-scale(0.5);' >
+
+</iframe>
+
+<br/>
+<button class="btn play" type="button" data-btn="Play">Play</button>
+<button class="btn pause" type="button" data-btn="Pause">Pause</button>
+<button class="btn duration" type="button" data-btn="Duration">Duration</button>
+<button class="btn CurrentTime" type="button" data-btn="CurrentTime">Current Time</button>
+<button class="btn Provider" type="button" data-btn="Provider">Provider</button>
+<button class="btn EmbedUrl" type="button" data-btn="EmbedUrl">Embed Url</button>
+<button class="btn DirectUrl" type="button" data-btn="DirectUrl">Direct Url</button>
+<button class="btn VideoId" type="button" data-btn="VideoId">Video Id</button>
+<button class="btn VideoTitle" type="button" data-btn="VideoTitle">Video Title</button>
+<button class="btn mute" type="button" data-btn="mute">mute</button>
+<button class="btn unmute" type="button" data-btn="unmute">mute</button>
+<button class="btn next" type="button" data-btn="next">next</button>
+<button class="btn prev" type="button" data-btn="prev">previous</button>
+<button class="btn program" type="button" data-btn="program">program</button>
+<button class="btn live" type="button" data-btn="live">live</button>
+
+<br/>
+<textarea id="res"></textarea>
+<script type="text/javascript">
+  
+
+</script>
+    <script type="text/javascript"  src="src/inscreenSdk-unmin.js"></script>
+    <script type="text/javascript">
+      inscreen.initPlayer('guestFrame1');
+      $( document ).ready(function() {
+      $('.play').on('click',function(){
+      inscreen.play();
+
+      })
+    $('.VideoTitle').on('click',function(){
+      inscreen.VideoTitle();
+    })
+    $('.VideoId').on('click',function(){
+      inscreen.VideoId();
+    })
+    $('.EmbedUrl').on('click',function(){
+      inscreen.EmbedUrl();
+    })
+    $('.Provider').on('click',function(){
+      inscreen.Provider();
+    })  
+    $('.btn').on('click',function(){
+      console.log(res);
+    })   
+    $('.pause').on('click',function(){
+      inscreen.pause();
+    })
+    $('.duration').on('click',function(){
+      inscreen.Duration();
+    })
+    $('.mute').on('click',function(){
+      inscreen.mute();
+    })
+    $('.CurrentTime').on('click',function(){
+      inscreen.CurrentTime();
+    })
+    $('.unmute').on('click',function(){
+      inscreen.mute();
+    })
+    $('.prev').on('click',function(){
+      inscreen.prev();
+    })
+    $('.next').on('click',function(){
+      inscreen.next();
+    })
+    $('.program').on('click',function(){
+      inscreen.program();
+    })
+    $('.live').on('click',function(){
+      inscreen.live();
+    })
+    
+  });
+    </script>
+</body>
+</html>
