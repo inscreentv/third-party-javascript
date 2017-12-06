@@ -27,7 +27,7 @@
 <button class="btn VideoId" type="button" data-btn="VideoId">Video Id</button>
 <button class="btn VideoTitle" type="button" data-btn="VideoTitle">Video Title</button>
 <button class="btn mute" type="button" data-btn="mute">mute</button>
-<button class="btn unmute" type="button" data-btn="unmute">mute</button>
+<button class="btn unmute" type="button" data-btn="unmute">unmute</button>
 <button class="btn next" type="button" data-btn="next">next</button>
 <button class="btn prev" type="button" data-btn="prev">previous</button>
 <button class="btn program" type="button" data-btn="program">program</button>
@@ -75,7 +75,7 @@
       inscreen.CurrentTime();
     })
     $('.unmute').on('click',function(){
-      inscreen.mute();
+      inscreen.unmute();
     })
     $('.prev').on('click',function(){
       inscreen.prev();
