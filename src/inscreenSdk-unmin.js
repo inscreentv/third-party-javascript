@@ -33,7 +33,10 @@ var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
         else if(e.data.EmbedUrl){
           res.EmbedUrl = e.data.EmbedUrl;
         }
-        $('#res').val(res);
+        else if(e.data.Action){
+          console.log('ssssssssssssssssssssssssssss')
+          $('#res').val(JSON.stringify((e.data.Action)));
+        }
     },false);
       	src = document.getElementById(ifrmaeId).src;
     },
