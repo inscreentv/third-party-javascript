@@ -33,17 +33,27 @@ inscreen.live();
 
 ## in video change , start or end result will be hold in object called res
 
-## get Current time (the returned value will be stocked in object called res)
-inscreen.CurrentTime();
+## get Current time 
+inscreen.CurrentTime(function(data){
+	console.log(data)
+});
 
-## get Duration (the returned value will be stocked in object called res)
-inscreen.Duration();
+## get Duration 
+inscreen.Duration(function(data){
+	console.log(data)
+});
 
-## get Video Title (the returned value will be stocked in object called res)
-inscreen.VideoTitle();
+## get Video Title 
+inscreen.VideoTitle(function(data){
+	console.log(data)
+});
 
-## get Video ID (the returned value will be stocked in object called res)
-inscreen.VideoId();
+## get Video ID 
+inscreen.VideoId(function(data){
+	console.log(data)
+});
  
 ## get Provider (the returned value will be stocked in object called res)
-inscreen.Provider();
+inscreen.Provider(function(data){
+	console.log(data)
+});

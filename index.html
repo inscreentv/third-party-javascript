@@ -12,7 +12,7 @@
 </head>
 <body>
 <div>Hi</div>
-<iframe src='http://cinetv.ego1.work/' id="guestFrame1" width='1200px' height='640px'  style='z-index:999999;margin: auto;position: absolute;top:0;bottom:0; left:0;right:0;-webkit-transform:scale(0.5);-moz-transform-scale(0.5);' >
+<iframe src='http://localhost:9000/' id="guestFrame1" width='1200px' height='640px'  style='z-index:999999;margin: auto;position: absolute;top:0;bottom:0; left:0;right:0;-webkit-transform:scale(0.5);-moz-transform-scale(0.5);' >
 
 </iframe>
 
@@ -41,38 +41,49 @@
 </script>
     <script type="text/javascript"  src="src/inscreenSdk-unmin.js"></script>
     <script type="text/javascript">
-      inscreen.initPlayer('guestFrame1');
       $( document ).ready(function() {
+      inscreen.initPlayer('guestFrame1',function(e){
+        
+      });
+      
       $('.play').on('click',function(){
-      inscreen.play();
-
+        inscreen.play();
       })
     $('.VideoTitle').on('click',function(){
-      inscreen.VideoTitle();
+      inscreen.VideoTitle(function(data){
+        console.log(data);
+      });
     })
     $('.VideoId').on('click',function(){
-      inscreen.VideoId();
+      inscreen.VideoId(function(data){
+        console.log(data);
+      });
     })
     $('.EmbedUrl').on('click',function(){
-      inscreen.EmbedUrl();
+      inscreen.EmbedUrl(function(data){
+        console.log(data);
+      });
     })
     $('.Provider').on('click',function(){
-      inscreen.Provider();
-    })  
-    $('.btn').on('click',function(){
-      console.log(res);
-    })   
+      inscreen.Provider(function(data){
+        console.log(data);
+      });
+    })    
     $('.pause').on('click',function(){
       inscreen.pause();
     })
     $('.duration').on('click',function(){
-      inscreen.Duration();
+      inscreen.Duration(function(data){
+        console.log(data);
+      });
     })
     $('.mute').on('click',function(){
       inscreen.mute();
     })
     $('.CurrentTime').on('click',function(){
-      inscreen.CurrentTime();
+      inscreen.CurrentTime(function(data){
+        console.log(data);
+      });
     })
     $('.unmute').on('click',function(){
       inscreen.mute();
@@ -89,7 +100,6 @@
     $('.live').on('click',function(){
       inscreen.live();
     })
-    
   });
     </script>
 </body>
